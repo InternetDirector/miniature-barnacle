@@ -1,0 +1,15 @@
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\bin\Debug\netstandard2.0\Tic_Tac_Toe1.deps.json
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\bin\Debug\netstandard2.0\Tic_Tac_Toe1.dll
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\bin\Debug\netstandard2.0\ref\Tic_Tac_Toe1.dll
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\bin\Debug\netstandard2.0\Tic_Tac_Toe1.pdb
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.csprojAssemblyReference.cache
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.AssemblyInfoInputs.cache
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.AssemblyInfo.cs
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.csproj.CoreCompileInputs.cache
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.dll
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\ref\Tic_Tac_Toe1.dll
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Tic_Tac_Toe1.pdb
+C:\Users\spanc\source\repos\Tic_Tac_Toe1\Tic_Tac_Toe1\Tic_Tac_Toe1\obj\Debug\netstandard2.0\Game.xaml.g.cs

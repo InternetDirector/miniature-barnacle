@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tic_Tac_Toe1.MainPage">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Text="Игра" Clicked="Button_Clicked_1"/>
+        <Button Text="О разработчике" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
