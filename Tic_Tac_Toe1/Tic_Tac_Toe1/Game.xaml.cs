@@ -87,7 +87,7 @@ namespace Tic_Tac_Toe1
                         WhoW(buttons[0, 0], 3);
                         return;
                     }
-                    if (buttons[0, 2].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[0, 2].Text)
+                    if (buttons[0, 2].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 0].Text)
                     {
                         WhoW(buttons[0, 2], 3);
                         return;
@@ -113,6 +113,7 @@ namespace Tic_Tac_Toe1
                     if (buttons[0, 3].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[3, 0].Text)
                     {
                         WhoW(buttons[0, 3], 4);
+                        return;
                     }
                     break;
             }
