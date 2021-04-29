@@ -11,6 +11,7 @@ namespace Tic_Tac_Toe1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Game : ContentPage
     {
+        Grid grid = new Grid();
         Button[,] buttons = new Button[3, 3];
         int playerTurn = 1;
         private string scoreT;
@@ -30,18 +31,11 @@ namespace Tic_Tac_Toe1
 
             ScoreT = $"{Score.x}     { Score.n}";
         }
-        private void Bt_SizeF(object sender, EventArgs e)
-        {
-            Forbuttons.Margin = 20;
-            Addingbtn(4);
-        }
-        private void Bt_SizeTh(object sender, EventArgs e)
-        {
-            Forbuttons.Margin = 70;
-            Addingbtn(3);
-        }
+        private void Bt_SizeF(object sender, EventArgs e) => Addingbtn(4);
+        private void Bt_SizeTh(object sender, EventArgs e) => Addingbtn(3);
         public void Addingbtn(int size)
         {
+            grid.Children.Clear();
             buttons = new Button[size, size];
             Forbuttons.Children.Clear();
             for (int i = 0; i < buttons.GetLength(1); i++)
@@ -52,10 +46,11 @@ namespace Tic_Tac_Toe1
                     
                     buttons[i, j].FontSize = 20;
                     buttons[i, j].Clicked += CheckSt;
-                    
-                    Forbuttons.Children.Add(buttons[i,j]);
+
+                    grid.Children.Add(buttons[i, j], i, j);
                 }
             }
+            Forbuttons.Children.Add(grid);
             playerTurn = 1;
         }
         private void CheckSt(object sender, EventArgs e)
@@ -65,7 +60,6 @@ namespace Tic_Tac_Toe1
             playerTurn = playerTurn == 1 ? 2 : 1;
             button.IsEnabled = false;
             Wincheck(buttons.GetLength(1));
-            IsTie();
         }
         public void  Wincheck(int size)
         {
@@ -75,49 +69,49 @@ namespace Tic_Tac_Toe1
                     for (int i = 0; i < size; i++)
                     {
                         if (buttons[i, 0].Text == buttons[i, 1].Text && buttons[i, 1].Text == buttons[i, 2].Text){
-                            WhoW(buttons[i, 0], 3);
-                            return;
+                            if(WhoW(buttons[i, 0], 3))
+                                return;
                         }
                         if (buttons[0, i].Text == buttons[1, i].Text && buttons[1, i].Text == buttons[2, i].Text){
-                            WhoW(buttons[0, i], 3);
-                            return;
+                            if(WhoW(buttons[0, i], 3))
+                                return;
                         }
                     }
                     if (buttons[0, 0].Text == buttons[1, 1].Text&& buttons[1, 1].Text== buttons[2, 2].Text){
-                        WhoW(buttons[0, 0], 3);
-                        return;
+                        if(WhoW(buttons[0, 0], 3))
+                            return;
                     }
                     if (buttons[0, 2].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 0].Text)
                     {
-                        WhoW(buttons[0, 2], 3);
-                        return;
+                        if(WhoW(buttons[0, 2], 3))
+                            return;
                     }
                     break;
                 case 4:
                     for (int i = 0; i < size; i++)
                     {
                         if (buttons[i, 0].Text == buttons[i, 1].Text && buttons[i, 1].Text == buttons[i, 2].Text&& buttons[i, 2].Text== buttons[i, 3].Text){
-                            WhoW(buttons[i, 0], 4);
-                            return;
+                            if (WhoW(buttons[i, 0], 4))
+                                return;
                         }
                         if (buttons[0, i].Text == buttons[1, i].Text && buttons[1, i].Text == buttons[2, i].Text&& buttons[2, i].Text== buttons[3, i].Text){
-                            WhoW(buttons[0, i], 4);
-                            return;
+                            if (WhoW(buttons[0, i], 4))
+                                return;
                         }
                     }
                     if (buttons[0, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text&& buttons[2, 2].Text== buttons[3, 3].Text)
                     {
-                        WhoW(buttons[0, 0], 4);
-                        return;
+                        if(WhoW(buttons[0, 0], 4))
+                            return;
                     }
                     if (buttons[0, 3].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[3, 0].Text)
                     {
-                        WhoW(buttons[0, 3], 4);
-                        return;
+                        if (WhoW(buttons[0, 3], 4))
+                            return;
                     }
                     break;
             }
-
+            IsTie();
         }
 
         private void Refresh_sc(object sender, EventArgs e)
@@ -138,24 +132,25 @@ namespace Tic_Tac_Toe1
             }
                 await DisplayAlert("Сообщение", "Ничья", "ОK");
         }
-        public async void WhoW(Button button, int size)
+        public bool WhoW(Button button, int size)
         {
             if (button.Text == "x")
             {
-                await DisplayAlert("Сообщение", "Победили крестики", "ОK");
+                DisplayAlert("Сообщение", "Победили крестики", "ОK");
                 Score.x++;
                 ScoreT = $"{Score.x}     { Score.n}";
                 Addingbtn(size);
-                return;
+                return true;
             }
             else if (button.Text == "O")
             {
-                await DisplayAlert("Сообщение", "Победили нолики", "ОK");
+                DisplayAlert("Сообщение", "Победили нолики", "ОK");
                 Score.n++;
                 ScoreT = $"{Score.x}     { Score.n}";
                 Addingbtn(size);
-                return;
+                return true;
             }
+            return false;
         }
     }
 }

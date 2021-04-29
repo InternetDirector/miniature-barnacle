@@ -8,7 +8,7 @@
                 HorizontalOptions="CenterAndExpand" BackgroundColor="DeepSkyBlue" FontSize="24" />
             <Label Text="{Binding ScoreT}"
                 HorizontalOptions="CenterAndExpand" BackgroundColor="DeepSkyBlue" FontSize="20"/>
-            <FlexLayout  Margin="20" x:Name="Forbuttons"  VerticalOptions="Center" Wrap="Wrap"  HorizontalOptions="CenterAndExpand"></FlexLayout>
+            <FlexLayout  Margin="70" x:Name="Forbuttons"  VerticalOptions="CenterAndExpand" Wrap="Wrap"  HorizontalOptions="Center"></FlexLayout>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
                 <Button Text="Обнулить счёт" Clicked="Refresh_sc"/>
                 <StackLayout Orientation="Horizontal">
